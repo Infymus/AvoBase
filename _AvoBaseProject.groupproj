@@ -1,0 +1,60 @@
+﻿	<Project xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+		<PropertyGroup>
+			<ProjectGuid>{F105EB5B-9096-45CE-A0BD-CF38C1FBA4C5}</ProjectGuid>
+		</PropertyGroup>
+		<ItemGroup>
+			<Projects Include="Source\AvoBase.dproj">
+				<Dependencies/>
+			</Projects>
+			<Projects Include="AutoUpdater\AvoAutoUpdater.dproj">
+				<Dependencies/>
+			</Projects>
+			<Projects Include="HelpMaker\HelpMaker.dproj">
+				<Dependencies/>
+			</Projects>
+		</ItemGroup>
+		<ProjectExtensions>
+			<Borland.Personality>Default.Personality.12</Borland.Personality>
+			<Borland.ProjectType/>
+			<BorlandProject>
+				<Default.Personality/>
+			</BorlandProject>
+		</ProjectExtensions>
+		<Target Name="AvoBase">
+			<MSBuild Projects="Source\AvoBase.dproj"/>
+		</Target>
+		<Target Name="AvoBase:Clean">
+			<MSBuild Targets="Clean" Projects="Source\AvoBase.dproj"/>
+		</Target>
+		<Target Name="AvoBase:Make">
+			<MSBuild Targets="Make" Projects="Source\AvoBase.dproj"/>
+		</Target>
+		<Target Name="AvoAutoUpdater">
+			<MSBuild Projects="AutoUpdater\AvoAutoUpdater.dproj"/>
+		</Target>
+		<Target Name="AvoAutoUpdater:Clean">
+			<MSBuild Targets="Clean" Projects="AutoUpdater\AvoAutoUpdater.dproj"/>
+		</Target>
+		<Target Name="AvoAutoUpdater:Make">
+			<MSBuild Targets="Make" Projects="AutoUpdater\AvoAutoUpdater.dproj"/>
+		</Target>
+		<Target Name="HelpMaker">
+			<MSBuild Projects="HelpMaker\HelpMaker.dproj"/>
+		</Target>
+		<Target Name="HelpMaker:Clean">
+			<MSBuild Targets="Clean" Projects="HelpMaker\HelpMaker.dproj"/>
+		</Target>
+		<Target Name="HelpMaker:Make">
+			<MSBuild Targets="Make" Projects="HelpMaker\HelpMaker.dproj"/>
+		</Target>
+		<Target Name="Build">
+			<CallTarget Targets="AvoBase;AvoAutoUpdater;HelpMaker"/>
+		</Target>
+		<Target Name="Clean">
+			<CallTarget Targets="AvoBase:Clean;AvoAutoUpdater:Clean;HelpMaker:Clean"/>
+		</Target>
+		<Target Name="Make">
+			<CallTarget Targets="AvoBase:Make;AvoAutoUpdater:Make;HelpMaker:Make"/>
+		</Target>
+		<Import Project="$(BDS)\Bin\CodeGear.Group.Targets" Condition="Exists('$(BDS)\Bin\CodeGear.Group.Targets')"/>
+	</Project>

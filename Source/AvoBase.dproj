@@ -1,0 +1,757 @@
+﻿	<Project xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+		<PropertyGroup>
+			<ProjectGuid>{21F729F4-3760-45A9-88C7-430032274705}</ProjectGuid>
+			<ProjectVersion>12.0</ProjectVersion>
+			<MainSource>AvoBase.dpr</MainSource>
+			<Config Condition="'$(Config)'==''">Debug</Config>
+			<DCC_DCCCompiler>DCC32</DCC_DCCCompiler>
+		</PropertyGroup>
+		<PropertyGroup Condition="'$(Config)'=='Base' or '$(Base)'!=''">
+			<Base>true</Base>
+		</PropertyGroup>
+		<PropertyGroup Condition="'$(Config)'=='Release' or '$(Cfg_1)'!=''">
+			<Cfg_1>true</Cfg_1>
+			<CfgParent>Base</CfgParent>
+			<Base>true</Base>
+		</PropertyGroup>
+		<PropertyGroup Condition="'$(Config)'=='Debug' or '$(Cfg_2)'!=''">
+			<Cfg_2>true</Cfg_2>
+			<CfgParent>Base</CfgParent>
+			<Base>true</Base>
+		</PropertyGroup>
+		<PropertyGroup Condition="'$(Base)'!=''">
+			<BRCC_IncludePath>C:\Program Files (x86)\CodeGear\RAD Studio\6.0\bin;..\tqrchart;..\Indy104708\Lib\Protocols;..\Indy104708\Lib\Core;..\Indy104708\Lib\Security;..\Indy104708\Lib\SuperCore;..\Indy104708\Lib\System;..\Indy104708\Lib\Protocols;..\tqrchart;C:\Program Files (x86)\CodeGear\RAD Studio\6.0\Quickrep504;$(BRCC_IncludePath)</BRCC_IncludePath>
+			<DCC_HPPEMIT_IGNORED>false</DCC_HPPEMIT_IGNORED>
+			<DCC_Warnings>false</DCC_Warnings>
+			<DCC_UsePackage>vcl;rtl;vclx;vclactnband;dbrtl;vcldb;vcldbx;bdertl;dsnap;dsnapcon;TeeUI;TeeDB;Tee;adortl;vclib;ibxpress;IndyCore;IndySystem;IndyProtocols;xmlrtl;inet;intrawebdb_100_120;Intraweb_100_120;VclSmp;vclie;websnap;webdsnap;inetdbbde;inetdbxpress;soaprtl;vclribbon;dbexpress;DbxCommonDriver;DataSnapIndy10ServerTransport;DataSnapProviderClient;DataSnapServer;DbxClientDriver;DBXInterBaseDriver;DBXMySQLDriver;dbxcds;DBXSybaseASEDriver;DBXSybaseASADriver;DBXOracleDriver;DBXMSSQLDriver;DBXInformixDriver;DBXDb2Driver;QR5Run_RAD6</DCC_UsePackage>
+			<DCC_DcuOutput>..\DCU</DCC_DcuOutput>
+			<DCC_ExeOutput>..\BIN</DCC_ExeOutput>
+			<DCC_BplOutput>..\PKG</DCC_BplOutput>
+			<BRCC_OutputDir>..\RES</BRCC_OutputDir>
+			<DCC_DcpOutput>..\DCP</DCC_DcpOutput>
+			<DCC_DependencyCheckOutputName>..\BIN\AvoBase.exe</DCC_DependencyCheckOutputName>
+			<DCC_ImageBase>00400000</DCC_ImageBase>
+			<DCC_UnitAlias>WinTypes=Windows;WinProcs=Windows;DbiTypes=BDE;DbiProcs=BDE;DbiErrs=BDE;$(DCC_UnitAlias)</DCC_UnitAlias>
+			<DCC_Platform>x86</DCC_Platform>
+			<DCC_E>false</DCC_E>
+			<DCC_N>false</DCC_N>
+			<DCC_S>false</DCC_S>
+			<DCC_F>false</DCC_F>
+			<DCC_K>false</DCC_K>
+		</PropertyGroup>
+		<PropertyGroup Condition="'$(Cfg_1)'!=''">
+			<DCC_LocalDebugSymbols>false</DCC_LocalDebugSymbols>
+			<DCC_Define>RELEASE;$(DCC_Define)</DCC_Define>
+			<DCC_SymbolReferenceInfo>0</DCC_SymbolReferenceInfo>
+			<DCC_DebugInformation>false</DCC_DebugInformation>
+		</PropertyGroup>
+		<PropertyGroup Condition="'$(Cfg_2)'!=''">
+			<DCC_Hints>false</DCC_Hints>
+			<DCC_Define>DEBUG;$(DCC_Define)</DCC_Define>
+		</PropertyGroup>
+		<ItemGroup>
+			<DelphiCompile Include="AvoBase.dpr">
+				<MainSource>MainSource</MainSource>
+			</DelphiCompile>
+			<DCCReference Include="ActionUnit.pas"/>
+			<DCCReference Include="Avobase_BaseForm_ListUnit.pas">
+				<Form>Avobase_BaseForm_List</Form>
+			</DCCReference>
+			<DCCReference Include="AvoBase_BaseForm_MenuUnit.pas">
+				<Form>AvoBase_BaseForm_Menu</Form>
+			</DCCReference>
+			<DCCReference Include="AvoBase_BaseForm_StandardUnit.pas">
+				<Form>Avobase_BaseForm_Standard</Form>
+			</DCCReference>
+			<DCCReference Include="AvoBase_BitButtonUnit.pas"/>
+			<DCCReference Include="AvoBase_DialogFormUnit.pas">
+				<Form>AvoBaseDialogForm</Form>
+			</DCCReference>
+			<DCCReference Include="AvoBase_EULAFormUnit.pas">
+				<Form>EULAForm</Form>
+			</DCCReference>
+			<DCCReference Include="AvoBase_GroupBoxUnit.pas">
+				<Form>AvoBaseGroupBox</Form>
+			</DCCReference>
+			<DCCReference Include="AvoBase_PercentFormUnit.pas">
+				<Form>PercentForm</Form>
+			</DCCReference>
+			<DCCReference Include="AvoBase_PopMenuUnit.pas"/>
+			<DCCReference Include="AvoBase_ToolBarUnit.pas"/>
+			<DCCReference Include="AvoBase_UpdateObjectUnit.pas"/>
+			<DCCReference Include="Brochure_ControlFormUnit.pas">
+				<Form>ControlForm_Brochure</Form>
+			</DCCReference>
+			<DCCReference Include="Brochure_EditFormUnit.pas">
+				<Form>BrochureEditForm</Form>
+			</DCCReference>
+			<DCCReference Include="Brochure_ListFormUnit.pas">
+				<Form>BrochureListForm</Form>
+			</DCCReference>
+			<DCCReference Include="Brochure_ViewFormUnit.pas">
+				<Form>avobase_baseform_menu1</Form>
+			</DCCReference>
+			<DCCReference Include="CalculatorFormUnit.pas">
+				<Form>CalculatorForm</Form>
+			</DCCReference>
+			<DCCReference Include="ConstantsUnit.pas"/>
+			<DCCReference Include="Customer_ControlFormUnit.pas">
+				<Form>ControlForm_Customer</Form>
+			</DCCReference>
+			<DCCReference Include="Customer_EditFormUnit.pas">
+				<Form>CustomerEditForm</Form>
+			</DCCReference>
+			<DCCReference Include="Customer_ListFormUnit.pas">
+				<Form>CustomerListForm</Form>
+			</DCCReference>
+			<DCCReference Include="Customer_ViewOrdersFormUnit.pas">
+				<Form>Customer_ViewForm</Form>
+			</DCCReference>
+			<DCCReference Include="Cycle_ControlFormUnit.pas">
+				<Form>ControlForm_Cycle</Form>
+			</DCCReference>
+			<DCCReference Include="Cycle_EditFormUnit.pas">
+				<Form>CycleEditForm</Form>
+			</DCCReference>
+			<DCCReference Include="Cycle_ListFormUnit.pas">
+				<Form>CycleListForm</Form>
+			</DCCReference>
+			<DCCReference Include="ErrorResultUnit.pas"/>
+			<DCCReference Include="IMG_StorageFormUnit.pas">
+				<Form>IMG_StorageForm</Form>
+			</DCCReference>
+			<DCCReference Include="INIFileUnit.pas"/>
+			<DCCReference Include="Invoice_FEEItemControlObjectUnit.pas"/>
+			<DCCReference Include="Invoice_LineItemControlObjectUnit.pas"/>
+			<DCCReference Include="Invoice_LineItem_InterfaceUnit.pas"/>
+			<DCCReference Include="mainform_formcontrolunit.pas"/>
+			<DCCReference Include="MAIN_FORM_UNIT.pas">
+				<Form>MainForm</Form>
+			</DCCReference>
+			<DCCReference Include="MasterDataInterfaceUnit.pas"/>
+			<DCCReference Include="MasterDataUnit.pas"/>
+			<DCCReference Include="MasterData_BaseGridUnit.pas"/>
+			<DCCReference Include="MasterData_BrochureListUnit.pas"/>
+			<DCCReference Include="Toolbox_BrochureToolBoxUnit.pas"/>
+			<DCCReference Include="MasterData_CustomerListUnit.pas"/>
+			<DCCReference Include="MasterData_CustomerOrderDetailsListUnit.pas"/>
+			<DCCReference Include="MasterData_CycleListUnit.pas"/>
+			<DCCReference Include="Toolbox_CycleToolBoxUnit.pas"/>
+			<DCCReference Include="MasterData_NavigationToolUnit.pas"/>
+			<DCCReference Include="MasterData_OrderListUnit.pas"/>
+			<DCCReference Include="Toolbox_OrgToolBoxUnit.pas"/>
+			<DCCReference Include="MasterData_OrgWelcomeFormListUnit.pas"/>
+			<DCCReference Include="Toolbox_PreferenceToolBoxUnit.pas"/>
+			<DCCReference Include="MasterData_ProductListUnit.pas"/>
+			<DCCReference Include="MasterData_ProductUnit.pas"/>
+			<DCCReference Include="Order_EditFormUnit.pas">
+				<Form>OrderEditForm</Form>
+			</DCCReference>
+			<DCCReference Include="Order_InvoiceObjectUnit.pas"/>
+			<DCCReference Include="Order_ListFormUnit.pas">
+				<Form>OrderListForm</Form>
+			</DCCReference>
+			<DCCReference Include="Preference_BaseFormUnit.pas">
+				<Form>PrefBaseForm</Form>
+			</DCCReference>
+			<DCCReference Include="Preference_MenuFormUnit.pas">
+				<Form>PreferencesForm</Form>
+			</DCCReference>
+			<DCCReference Include="Preference_RegistrationFormUnit.pas">
+				<Form>Pref_RegistrationForm</Form>
+			</DCCReference>
+			<DCCReference Include="Product_ControlFormUnit.pas">
+				<Form>ControlForm_Product</Form>
+			</DCCReference>
+			<DCCReference Include="Product_EditFormUnit.pas">
+				<Form>ProductEditForm</Form>
+			</DCCReference>
+			<DCCReference Include="Product_ListFormUnit.pas">
+				<Form>ProductListForm</Form>
+			</DCCReference>
+			<DCCReference Include="Product_ViewFormUnit.pas">
+				<Form>Product_ViewForm</Form>
+			</DCCReference>
+			<DCCReference Include="Tax_InterfaceUnit.pas"/>
+			<DCCReference Include="ToolBoxUnit.pas"/>
+			<DCCReference Include="VerificationUnit.pas"/>
+			<DCCReference Include="Verification_KeysUnit.pas"/>
+			<DCCReference Include="WelcomeFormUnit.pas">
+				<Form>WelcomeForm</Form>
+			</DCCReference>
+			<DCCReference Include="zz_base_design_item_form.pas">
+				<Form>Form2</Form>
+			</DCCReference>
+			<DCCReference Include="zz_testformunit.pas">
+				<Form>Form1</Form>
+			</DCCReference>
+			<DCCReference Include="Invoice_MOPItem_FormUnit.pas">
+				<Form>Invoice_MOPItem_Form</Form>
+			</DCCReference>
+			<DCCReference Include="Invoice_MOPItemControlObjectUnit.pas"/>
+			<DCCReference Include="Invoice_MOPItem_InterfaceUnit.pas"/>
+			<DCCReference Include="Invoice_LineItem_Quick_FormUnit.pas">
+				<Form>Invoice_LineItem_Quick_Form</Form>
+			</DCCReference>
+			<DCCReference Include="Invoice_LineItem_NoFormUnit.pas"/>
+			<DCCReference Include="Invoice_MOPItem_NoFormUnit.pas"/>
+			<DCCReference Include="Invoice_FEEItem_NoFormUnit.pas"/>
+			<DCCReference Include="Invoice_FEEItem_FormUnit.pas">
+				<Form>Invoice_FEEItem_Form</Form>
+			</DCCReference>
+			<DCCReference Include="Invoice_FEEItem_InterfaceUnit.pas"/>
+			<DCCReference Include="Cycle_ViewOrderListUnit.pas">
+				<Form>CycleViewOrderListForm</Form>
+			</DCCReference>
+			<DCCReference Include="MasterData_CycleOrderListUnit.pas"/>
+			<DCCReference Include="Toolbox_OrderToolBoxUnit.pas"/>
+			<DCCReference Include="MasterData_CycleSelectUnit.pas"/>
+			<DCCReference Include="Toolbox_CustomerToolBoxUnit.pas"/>
+			<DCCReference Include="MasterData_CustSelectUnit.pas"/>
+			<DCCReference Include="Toolbox_TaxToolBoxUnit.pas"/>
+			<DCCReference Include="Toolbox_ShippingToolBoxUnit.pas"/>
+			<DCCReference Include="Preference_ShippingFormUnit.pas">
+				<Form>Pref_ShippingForm</Form>
+			</DCCReference>
+			<DCCReference Include="Preference_OrganizationsFormUnit.pas">
+				<Form>Pref_OrganizationsForm</Form>
+			</DCCReference>
+			<DCCReference Include="MasterData_OrgListUnit.pas"/>
+			<DCCReference Include="Preference_OrganizationsEditFormUnit.pas">
+				<Form>Preference_OrgEditForm</Form>
+			</DCCReference>
+			<DCCReference Include="MasterData_TaxListUnit.pas"/>
+			<DCCReference Include="Preference_TaxesFormUnit.pas">
+				<Form>Pref_TaxesForm</Form>
+			</DCCReference>
+			<DCCReference Include="Preference_TaxesEditFormUnit.pas">
+				<Form>Pref_TaxEditForm</Form>
+			</DCCReference>
+			<DCCReference Include="masterdata_BaseDataClassUnit.pas"/>
+			<DCCReference Include="Preference_ShippingEditFormUnit.pas">
+				<Form>Pref_ShippingEditForm</Form>
+			</DCCReference>
+			<DCCReference Include="MasterData_ShippingListUnit.pas"/>
+			<DCCReference Include="MasterData_UpdateUnit.pas"/>
+			<DCCReference Include="Preference_FeesFormUnit.pas">
+				<Form>Pref_FeesForm</Form>
+			</DCCReference>
+			<DCCReference Include="MasterData_FeeListUnit.pas"/>
+			<DCCReference Include="Preference_FeeEditFormUnit.pas">
+				<Form>Pref_FeeEditForm</Form>
+			</DCCReference>
+			<DCCReference Include="AvoBase_BaseForm_SelectUnit.pas">
+				<Form>AvoBase_BaseForm_Select</Form>
+			</DCCReference>
+			<DCCReference Include="Cycle_SelectFormUnit.pas">
+				<Form>Cycle_SelectForm</Form>
+			</DCCReference>
+			<DCCReference Include="Toolbox_PaymentToolBoxUnit.pas"/>
+			<DCCReference Include="Report_BaseForm.pas">
+				<Form>AvoBase_ReportBase</Form>
+			</DCCReference>
+			<DCCReference Include="Report_InvoiceFormUnit.pas">
+				<Form>Report_ReturnForm</Form>
+			</DCCReference>
+			<DCCReference Include="Order_OrderNumberInputFormUnit.pas">
+				<Form>OrderNumberInputForm</Form>
+			</DCCReference>
+			<DCCReference Include="Preference_GeneralSettingsFormUnit.pas">
+				<Form>Pref_GeneralSettingsForm</Form>
+			</DCCReference>
+			<DCCReference Include="Customer_SelectFormUnit.pas">
+				<Form>CustomerSelectForm</Form>
+			</DCCReference>
+			<DCCReference Include="Preference_RepresentativeFormUnit.pas">
+				<Form>Pref_RepresentativeForm</Form>
+			</DCCReference>
+			<DCCReference Include="Preference_EmailFormUnit.pas">
+				<Form>Pref_EmailSettingsForm</Form>
+			</DCCReference>
+			<DCCReference Include="EncryptUnit.pas">
+				<Form>EncryptObj</Form>
+				<DesignClass>TDataModule</DesignClass>
+			</DCCReference>
+			<DCCReference Include="Toolbox_CreditToolBoxUnit.pas"/>
+			<DCCReference Include="Product_SelectFormUnit.pas">
+				<Form>ProductSelectForm</Form>
+			</DCCReference>
+			<DCCReference Include="Toolbox_ProductToolBoxUnit.pas"/>
+			<DCCReference Include="MasterData_ProductSelectListUnit.pas"/>
+			<DCCReference Include="Order_TakeMethodOfPaymentEditFormUnit.pas">
+				<Form>OrderTakeMethodOfPaymentForm</Form>
+			</DCCReference>
+			<DCCReference Include="Order_OrderSelectOrderByCustIDFormUnit.pas">
+				<Form>OrderSelectOrderByCustIDForm</Form>
+			</DCCReference>
+			<DCCReference Include="DiscountFormUnit.pas">
+				<Form>DiscountForm</Form>
+			</DCCReference>
+			<DCCReference Include="Order_ControlFormUnit.pas">
+				<Form>ControlForm_Order</Form>
+			</DCCReference>
+			<DCCReference Include="Payment_SelectPaymentFormUnit.pas">
+				<Form>Payment_SelectPaymentForm</Form>
+			</DCCReference>
+			<DCCReference Include="MasterData_PaymentListUnit.pas"/>
+			<DCCReference Include="Payment_VoidPaymentFormUnit.pas">
+				<Form>Payment_VoidPaymentForm</Form>
+			</DCCReference>
+			<DCCReference Include="MasterData_TransactionListUnit.pas"/>
+			<DCCReference Include="Customer_ViewAccountFormUnit.pas">
+				<Form>Customer_AccountViewForm</Form>
+			</DCCReference>
+			<DCCReference Include="Order_SelectOrderToReturnFormUnit.pas">
+				<Form>OrderSelectOrderToReturnForm</Form>
+			</DCCReference>
+			<DCCReference Include="MasterData_OrderSelectClosedOnlyListUnit.pas"/>
+			<DCCReference Include="Return_InvoiceObjectUnit.pas"/>
+			<DCCReference Include="Return_EditFormUnit.pas">
+				<Form>OrderReturnEditForm</Form>
+			</DCCReference>
+			<DCCReference Include="Return_LineItem_InterfacEunit.pas"/>
+			<DCCReference Include="Return_FeeItem_InterfaceUnit.pas"/>
+			<DCCReference Include="Return_LineItemControlObjectUnit.pas"/>
+			<DCCReference Include="Return_FEEItem_FormUnit.pas">
+				<Form>Return_FEEItem_Form</Form>
+			</DCCReference>
+			<DCCReference Include="Return_FEEItem_NoFormUnit.pas"/>
+			<DCCReference Include="Return_LineItem_FormUnit.pas">
+				<Form>Return_LineItem_Form</Form>
+			</DCCReference>
+			<DCCReference Include="Return_LineItem_NoFormUnit.pas"/>
+			<DCCReference Include="Return_FEEItemControlObjectUnit.pas"/>
+			<DCCReference Include="Expense_ControlFormUnit.pas">
+				<Form>ControlForm_Expense</Form>
+			</DCCReference>
+			<DCCReference Include="Expense_ListFormUnit.pas">
+				<Form>ExpenseListForm</Form>
+			</DCCReference>
+			<DCCReference Include="MasterData_ExpenseListUnit.pas"/>
+			<DCCReference Include="Preference_ExpenseTypeFormUnit.pas">
+				<Form>Pref_ExpenseTypesForm</Form>
+			</DCCReference>
+			<DCCReference Include="MasterData_ExpenseTypeListUnit.pas"/>
+			<DCCReference Include="Preference_ExpenseTypeEditFormUnit.pas">
+				<Form>Pref_ExpenseTypeEditForm</Form>
+			</DCCReference>
+			<DCCReference Include="Preference_EarningTypeFormUnit.pas">
+				<Form>Pref_EarningTypesForm</Form>
+			</DCCReference>
+			<DCCReference Include="Preference_EarningTypeEditFormUnit.pas">
+				<Form>Pref_EarningTypeEditForm</Form>
+			</DCCReference>
+			<DCCReference Include="MasterData_EarningTypeListUnit.pas"/>
+			<DCCReference Include="Cycle_SelectOrgAndCycleFormUnit.pas">
+				<Form>OrgSelectOrgAndCycleForm</Form>
+			</DCCReference>
+			<DCCReference Include="Toolbox_ExpenseToolBoxUnit.pas"/>
+			<DCCReference Include="MasterData_ExpenseListEditUnit.pas"/>
+			<DCCReference Include="Expense_ListEditFormUnit.pas">
+				<Form>ExpenseList_EditForm</Form>
+			</DCCReference>
+			<DCCReference Include="Toolbox_EarningToolBoxUnit.pas"/>
+			<DCCReference Include="Expense_ItemEditFormUnit.pas">
+				<Form>Expense_EditForm</Form>
+			</DCCReference>
+			<DCCReference Include="Expense_ViewExpensesFormUnit.pas">
+				<Form>Expense_ViewExpensesForm</Form>
+			</DCCReference>
+			<DCCReference Include="MasterData_EarningListUnit.pas"/>
+			<DCCReference Include="MasterData_EarningListEditUnit.pas"/>
+			<DCCReference Include="Earning_ControlFormUnit.pas">
+				<Form>ControlForm_Earning</Form>
+			</DCCReference>
+			<DCCReference Include="Earning_ListFormUnit.pas">
+				<Form>EarningListForm</Form>
+			</DCCReference>
+			<DCCReference Include="Earning_ListEditFormUnit.pas">
+				<Form>EarningList_EditForm</Form>
+			</DCCReference>
+			<DCCReference Include="Earning_ItemEditFormUnit.pas">
+				<Form>Earning_EditForm</Form>
+			</DCCReference>
+			<DCCReference Include="Earning_ViewEarningsFormUnit.pas">
+				<Form>Earning_ViewEarningsForm</Form>
+			</DCCReference>
+			<DCCReference Include="MasterData_ProductBOListUnit.pas"/>
+			<DCCReference Include="BackOrder_ManagerFormUnit.pas">
+				<Form>BackOrder_ManagerForm</Form>
+			</DCCReference>
+			<DCCReference Include="Email_ControlFormUnit.pas">
+				<Form>ControlForm_Email</Form>
+			</DCCReference>
+			<DCCReference Include="Toolbox_EmailToolBoxUnit.pas"/>
+			<DCCReference Include="Email_ListFormUnit.pas">
+				<Form>EmailListForm</Form>
+			</DCCReference>
+			<DCCReference Include="MasterData_EmailListUnit.pas"/>
+			<DCCReference Include="Order_ViewOrderFormUnit.pas">
+				<Form>OrderViewOrderForm</Form>
+			</DCCReference>
+			<DCCReference Include="Fee_SelectFormUnit.pas">
+				<Form>FeeSelectForm</Form>
+			</DCCReference>
+			<DCCReference Include="MasterData_FeeSelectListUnit.pas"/>
+			<DCCReference Include="Report_ReturnFormUnit.pas">
+				<Form>Report_Return</Form>
+			</DCCReference>
+			<DCCReference Include="Escrow_SelectEscrowFormUnit.pas">
+				<Form>Escrow_SelectEscrow</Form>
+			</DCCReference>
+			<DCCReference Include="Order_FinalizationFormUnit.pas">
+				<Form>Order_FinalizationForm</Form>
+			</DCCReference>
+			<DCCReference Include="Return_FinalizationFormUnit.pas">
+				<Form>Return_FinalizationForm</Form>
+			</DCCReference>
+			<DCCReference Include="ReturnProduct_ManagerFormUnit.pas">
+				<Form>ReturnProduct_Manager</Form>
+			</DCCReference>
+			<DCCReference Include="MasterData_ProductReturnListUnit.pas"/>
+			<DCCReference Include="ToolBox_EscrowToolBoxUnit.pas"/>
+			<DCCReference Include="Transaction_Object.pas"/>
+			<DCCReference Include="Transaction_PaymentsObjectUnit.pas"/>
+			<DCCReference Include="Transaction_ReversalsObjectUnit.pas"/>
+			<DCCReference Include="Transaction_EscrowObjectUnit.pas"/>
+			<DCCReference Include="Transaction_TransObjectUnit.pas"/>
+			<DCCReference Include="Transaction_Payments_SubObjectUnit.pas"/>
+			<DCCReference Include="MasterData_OrderConfirmationListUnit.pas"/>
+			<DCCReference Include="Toolbox_FeeToolboxUnit.pas"/>
+			<DCCReference Include="Return_ViewReturnFormUnit.pas">
+				<Form>ReturnViewReturnForm</Form>
+			</DCCReference>
+			<DCCReference Include="MasterData_ReturnConfirmationListUnit.pas"/>
+			<DCCReference Include="Invoice_MOP_SelectEscrowFormUnit.pas">
+				<Form>Invoice_MOP_SelectEscrowForm</Form>
+			</DCCReference>
+			<DCCReference Include="Preference_InvoiceSettingsForm.pas">
+				<Form>Pref_InvoiceSettingsForm</Form>
+			</DCCReference>
+			<DCCReference Include="Preference_ProductSettingsForm.pas">
+				<Form>Pref_ProductSettingsForm</Form>
+			</DCCReference>
+			<DCCReference Include="Product_InvoiceLineItemProductLookupUnit.pas">
+				<Form>InvoiceLineItemProductLookupForm</Form>
+			</DCCReference>
+			<DCCReference Include="MasterData_InvoiceLineItemProductLookupUnit.pas"/>
+			<DCCReference Include="Preference_TaxMasterFormUnit.pas">
+				<Form>Pref_TaxesMasterForm</Form>
+			</DCCReference>
+			<DCCReference Include="MasterData_TaxMasterListUnit.pas"/>
+			<DCCReference Include="Preference_TaxMasterEditFormUnit.pas">
+				<Form>Pref_TaxMasterEditForm</Form>
+			</DCCReference>
+			<DCCReference Include="Preference_TaxMasterSetDefaultFormUnit.pas">
+				<Form>Pref_TaxesMasterSetDefaultForm</Form>
+			</DCCReference>
+			<DCCReference Include="Accounting_EscrowFormUnit.pas">
+				<Form>AccountingEscrowForm</Form>
+			</DCCReference>
+			<DCCReference Include="MasterData_AccountingEscrowListUnit.pas"/>
+			<DCCReference Include="Accounting_EscrowModifyFormUnit.pas">
+				<Form>EscrowModifyForm</Form>
+			</DCCReference>
+			<DCCReference Include="Report_ControlFormUnit.pas">
+				<Form>ControlForm_Report</Form>
+			</DCCReference>
+			<DCCReference Include="Report_InterfaceFormUnit.pas">
+				<Form>Report_InterfaceForm</Form>
+			</DCCReference>
+			<DCCReference Include="Report_CustomerListUnit.pas">
+				<Form>Report_Customer_List</Form>
+			</DCCReference>
+			<DCCReference Include="Report_CustomerTopCustomerByOrdersFormUnit.pas">
+				<Form>Report_Customer_TopCustByOrder</Form>
+			</DCCReference>
+			<DCCReference Include="MasterData_ReportCustomerTopCustByOrdUnit.pas"/>
+			<DCCReference Include="MasterData_ReportCustomerTopCustByOrdAmountUnit.pas"/>
+			<DCCReference Include="Report_CustomerTopCustomerByOrderAmountFormUnit.pas">
+				<Form>Report_Customer_TopCustByOrderAmount</Form>
+			</DCCReference>
+			<DCCReference Include="MasterData_ReportOrderListUnit.pas"/>
+			<DCCReference Include="Report_OrderListFormUnit.pas">
+				<Form>Report_Order_List</Form>
+			</DCCReference>
+			<DCCReference Include="MasterData_EmailQueueUnit.pas"/>
+			<DCCReference Include="AvoBase_CodeTextEditorFormUnit.pas">
+				<Form>AvoBase_CodeTextEditor</Form>
+			</DCCReference>
+			<DCCReference Include="Email_CleanEmailSelectFormUnit.pas">
+				<Form>EmailCleanEmailSelectForm</Form>
+			</DCCReference>
+			<DCCReference Include="AvoBase_StartupFormUnit.pas">
+				<Form>StartupForm</Form>
+			</DCCReference>
+			<DCCReference Include="Report_Customer_OrderTransactionHistoryFormUnit.pas">
+				<Form>Report_Customer_OrderTransactionHistory</Form>
+			</DCCReference>
+			<DCCReference Include="Report_Customer_OrderHistoryFormUnit.pas">
+				<Form>Report_Customer_OrderHistory</Form>
+			</DCCReference>
+			<DCCReference Include="Report_Customer_SingleCustomerFormUnit.pas">
+				<Form>Report_Customer_SingleCustomer</Form>
+			</DCCReference>
+			<DCCReference Include="Report_Customer_LabelsFormUnit.pas">
+				<Form>Report_Customer_Labels</Form>
+			</DCCReference>
+			<DCCReference Include="Report_Cycle_CycleListByOrgFormUnit.pas">
+				<Form>Report_Cycle_CycleListByOrg</Form>
+			</DCCReference>
+			<DCCReference Include="Report_Order_LabelsFormUnit.pas">
+				<Form>Report_Order_Labels</Form>
+			</DCCReference>
+			<DCCReference Include="Report_Order_BackOrderListFormUnit.pas">
+				<Form>Report_Order_BackOrderList</Form>
+			</DCCReference>
+			<DCCReference Include="Report_Earning_TypesFormUnit.pas">
+				<Form>Report_Earning_Types</Form>
+			</DCCReference>
+			<DCCReference Include="Report_Earning_EarningByCycleFormUnit.pas">
+				<Form>Report_Earning_EarningByCycle</Form>
+			</DCCReference>
+			<DCCReference Include="Report_Earning_ListByCycleFormUnit.pas">
+				<Form>Report_Earning_ListByCycle</Form>
+			</DCCReference>
+			<DCCReference Include="Report_Expense_TypeFormUnit.pas">
+				<Form>Report_Expense_Type</Form>
+			</DCCReference>
+			<DCCReference Include="Report_Expense_ByCycleFormUnit.pas">
+				<Form>Report_Expense_ByCycle</Form>
+			</DCCReference>
+			<DCCReference Include="Report_Expense_ListByCycleFormUnit.pas">
+				<Form>Report_Expense_ListByCycle</Form>
+			</DCCReference>
+			<DCCReference Include="Report_EarningVsExpenseByCycleFormUnit.pas">
+				<Form>Report_EarningVsExpenseByCycle</Form>
+			</DCCReference>
+			<DCCReference Include="Report_Product_SingleProductFormUnit.pas">
+				<Form>Report_Product_SingleProduct</Form>
+			</DCCReference>
+			<DCCReference Include="Report_Product_QuantityOnHandFormUnit.pas">
+				<Form>Report_Product_QuantityOnHand</Form>
+			</DCCReference>
+			<DCCReference Include="Report_Product_ProductListFormUnit.pas">
+				<Form>Report_Product_ProductList</Form>
+			</DCCReference>
+			<DCCReference Include="Report_Accounting_FeesCollectedByCycleFormUnit.pas">
+				<Form>Report_Accounting_FeesCollectedByCycle</Form>
+			</DCCReference>
+			<DCCReference Include="Report_Accounting_ShippingCollectedByCycleFormUnit.pas">
+				<Form>Report_Accounting_ShippingCollectedByCycle</Form>
+			</DCCReference>
+			<DCCReference Include="Report_Accounting_TaxesCollectedByCycleFormUnit.pas">
+				<Form>Report_Accounting_TaxesCollectedByCycle</Form>
+			</DCCReference>
+			<DCCReference Include="Report_Accounting_DepositSlipByCycleFormUnit.pas">
+				<Form>Report_Accounting_DepositSlipByCycle</Form>
+			</DCCReference>
+			<DCCReference Include="Report_Accounting_VoidNSFByCycleFormUnit.pas">
+				<Form>Report_Accounting_VoidNSFByCycle</Form>
+			</DCCReference>
+			<DCCReference Include="Report_Accounting_ReturnsByCycleFormUnit.pas">
+				<Form>Report_Accounting_ReturnsByCycle</Form>
+			</DCCReference>
+			<DCCReference Include="Report_Accounting_TransactionLogByCycleFormUnit.pas">
+				<Form>Report_Accounting_TransactionLogByCycle</Form>
+			</DCCReference>
+			<DCCReference Include="Report_Accounting_TaxExemptByCycleFormUnit.pas">
+				<Form>Report_Accounting_TaxExemptByCycle</Form>
+			</DCCReference>
+			<DCCReference Include="Report_Order_OrderProductFormUnit.pas">
+				<Form>Report_Order_OrderProduct</Form>
+			</DCCReference>
+			<DCCReference Include="MasterData_ReportOrderProductListUnit.pas"/>
+			<DCCReference Include="MasterData_ReportCycleListUnit.pas"/>
+			<DCCReference Include="MasterData_ReportProductQuantityOnHandUnit.pas"/>
+			<DCCReference Include="Report_Product_ReturnProductListFormUnit.pas">
+				<Form>Report_Product_ReturnProductList</Form>
+			</DCCReference>
+			<DCCReference Include="MasterData_ReportProductReturnListUnit.pas"/>
+			<DCCReference Include="MasterData_ReportEarningByCycleUnit.pas"/>
+			<DCCReference Include="MasterData_ReportExpenseByCycleUnit.pas"/>
+			<DCCReference Include="MasterData_ReportEarningListByCycleUnit.pas"/>
+			<DCCReference Include="MasterData_ReportExpenseListByCycleUnit.pas"/>
+			<DCCReference Include="MasterData_ReportEarningVsExpenseByCycleUnit.pas"/>
+			<DCCReference Include="MasterData_ReportAccountingFeesCollectedByCycleUnit.pas"/>
+			<DCCReference Include="MasterData_ReportAccountingShippingCollectedByCycleUnit.pas"/>
+			<DCCReference Include="MasterData_ReportAccountingTaxesCollectedByCycleUnit.pas"/>
+			<DCCReference Include="MasterData_ReportAccountingTaxExemptByCycleUnit.pas"/>
+			<DCCReference Include="MasterData_ReportInvoiceUnit.pas"/>
+			<DCCReference Include="AvoBase_BaseForm_DateMaskEdit.pas">
+				<Form>AvoDateEdit</Form>
+			</DCCReference>
+			<DCCReference Include="MasterData_ReportAccountingTransactionLogByCycleUnit.pas"/>
+			<DCCReference Include="Report_Accounting_FeesReturnedFormUnit.pas">
+				<Form>Report_Accounting_FeesReturned</Form>
+			</DCCReference>
+			<DCCReference Include="MasterData_ReportReturnsByCycleUnit.pas"/>
+			<DCCReference Include="MasterData_ReportVoidNSFByCycleUnit.pas"/>
+			<DCCReference Include="MasterData_ReportProductSingleProductUnit.pas"/>
+			<DCCReference Include="MasterData_Report_ProductListUnit.pas"/>
+			<DCCReference Include="..\HelpMaker\AvoBase_HelpFormUnit.pas">
+				<Form>AvoBaseHelpForm</Form>
+			</DCCReference>
+			<DCCReference Include="..\HelpMaker\MasterData_HelpUnit.pas"/>
+			<DCCReference Include="..\Encryption\ASN1.pas"/>
+			<DCCReference Include="..\Encryption\CPU.pas"/>
+			<DCCReference Include="..\Encryption\CRC.pas"/>
+			<DCCReference Include="..\Encryption\DECCipher.pas"/>
+			<DCCReference Include="..\Encryption\DECData.pas"/>
+			<DCCReference Include="..\Encryption\DECFmt.pas"/>
+			<DCCReference Include="..\Encryption\DECHash.pas"/>
+			<DCCReference Include="..\Encryption\DECRandom.pas"/>
+			<DCCReference Include="..\Encryption\DECUtil.pas"/>
+			<DCCReference Include="..\Encryption\TypInfoEx.pas"/>
+			<DCCReference Include="Avobase_RegisterDialogFormUnit.pas">
+				<Form>AvoBaseRegisterDialogForm</Form>
+			</DCCReference>
+			<DCCReference Include="..\MaskAmountEdit\MaskAmountEdit.pas"/>
+			<DCCReference Include="AvoBase_UpdateViewerFormUnit.pas">
+				<Form>AvoBase_UpdateViewer</Form>
+			</DCCReference>
+			<DCCReference Include="Customer_NoteListFormUnit.pas">
+				<Form>Customer_NoteListForm</Form>
+			</DCCReference>
+			<DCCReference Include="MasterData_CustomerNoteListUnit.pas"/>
+			<DCCReference Include="AvoBase_TextEditorFormUnit.pas">
+				<Form>AvoBaseTextEditor</Form>
+			</DCCReference>
+			<DCCReference Include="Report_Customer_OutstandingBalanceFormUnit.pas">
+				<Form>Report_Customer_OutstandingBalance</Form>
+			</DCCReference>
+			<DCCReference Include="MasterData_ReportCustomerBalanceDueUnit.pas"/>
+			<DCCReference Include="MasterData_TransactionQueryUnit.pas"/>
+			<DCCReference Include="Report_Accounting_OrderBreakDowNByCycleFormUnit.pas">
+				<Form>Report_Accounting_OrderAmountBreakDownByCycle</Form>
+			</DCCReference>
+			<DCCReference Include="MasterData_ReportAccountingOrderAmountByCycleUnit.pas"/>
+			<DCCReference Include="MasterData_EmailQueueListByCycleIDUnit.pas"/>
+			<DCCReference Include="AvoBase_EmailDialogFormUnit.pas">
+				<Form>EmailDialogForm</Form>
+			</DCCReference>
+			<DCCReference Include="Cycle_SelectOrgAndMultipleCycleFormUnit.pas">
+				<Form>OrgSelectOrgAndMultieCycleForm</Form>
+			</DCCReference>
+			<DCCReference Include="Customer_ProdHistoryFormUnit.pas">
+				<Form>Customer_ProdHistoryForm</Form>
+			</DCCReference>
+			<DCCReference Include="MasterData_CustomerProdHistoryUnit.pas"/>
+			<DCCReference Include="CustOrd_CustLineControlObjectUnit.pas"/>
+			<DCCReference Include="CustOrd_CustFormUnit.pas">
+				<Form>CustOrd_CustForm</Form>
+			</DCCReference>
+			<DCCReference Include="CustOrd_ProdLineControlObjectUnit.pas"/>
+			<DCCReference Include="CustOrd_CustProdFormUnit.pas">
+				<Form>Form5</Form>
+			</DCCReference>
+			<DCCReference Include="CustOrd_MainFormUnit.pas">
+				<Form>CustOrd_MainForm</Form>
+			</DCCReference>
+			<DCCReference Include="MasterData_SelectOrderByCustIDUnit.pas"/>
+			<DCCReference Include="Report_Customer_EscrowBalances.pas">
+				<Form>Report_CustomerEscrowBalance</Form>
+			</DCCReference>
+			<DCCReference Include="MasterData_Report_CustomerEscrowBalances.pas"/>
+			<DCCReference Include="MasterData_ReportShippingReturns.pas"/>
+			<DCCReference Include="Report_Accounting_ShippingReturnedFormUnit.pas">
+				<Form>Report_Accounting_ShippingReturns</Form>
+			</DCCReference>
+			<DCCReference Include="HintsUnit.pas"/>
+			<DCCReference Include="AvoBase_RTF_ReaderFormUnit.pas">
+				<Form>AvoBaseRTFReader</Form>
+			</DCCReference>
+			<DCCReference Include="AvoBase_FindKeyWebDialogFormUnit.pas">
+				<Form>AvoBaseWebKeyDialogForm</Form>
+			</DCCReference>
+			<DCCReference Include="Product_ImportProductFormUnit.pas">
+				<Form>Product_ImportProductForm</Form>
+			</DCCReference>
+			<DCCReference Include="Product_ImportProductObject.pas"/>
+			<DCCReference Include="Product_ImportProductLineItemFormUnit.pas">
+				<Form>ImportProduct_LineItem_Form</Form>
+			</DCCReference>
+			<DCCReference Include="Preference_Taxes_SetDefaultRoundingFormUnit.pas">
+				<Form>Pref_Taxes_SetDefaultRoundingForm</Form>
+			</DCCReference>
+			<DCCReference Include="Customer_ExportFormUnit.pas">
+				<Form>Export_Customer</Form>
+			</DCCReference>
+			<DCCReference Include="Customer_ExportSelectTypeFormUnit.pas">
+				<Form>Customer_ExportSelectTypeForm</Form>
+			</DCCReference>
+			<DCCReference Include="..\tqrchart\QrTee.pas"/>
+			<DCCReference Include="RecordStructureUnit.pas"/>
+			<DCCReference Include="Invoice_LineItem_Simple_FormUnit.pas">
+				<Form>Invoice_LineItem_SimpleForm</Form>
+			</DCCReference>
+			<DCCReference Include="Invoice_LineItem_FormUnit.pas">
+				<Form>Invoice_LineItem_Full_Form</Form>
+			</DCCReference>
+			<DCCReference Include="Invoice_lineItem_QuickPop_FormUnit.pas">
+				<Form>LineItem_QuickPop</Form>
+			</DCCReference>
+			<None Include="..\_TODO\AVO_TODO_LIST.txt"/>
+			<None Include="..\HelpMaker\_AvoBase_HelpFile.abh"/>
+			<BuildConfiguration Include="Base">
+				<Key>Base</Key>
+			</BuildConfiguration>
+			<BuildConfiguration Include="Debug">
+				<Key>Cfg_2</Key>
+				<CfgParent>Base</CfgParent>
+			</BuildConfiguration>
+			<BuildConfiguration Include="Release">
+				<Key>Cfg_1</Key>
+				<CfgParent>Base</CfgParent>
+			</BuildConfiguration>
+		</ItemGroup>
+		<Import Project="$(BDS)\Bin\CodeGear.Delphi.Targets" Condition="Exists('$(BDS)\Bin\CodeGear.Delphi.Targets')"/>
+		<ProjectExtensions>
+			<Borland.Personality>Delphi.Personality.12</Borland.Personality>
+			<Borland.ProjectType/>
+			<BorlandProject>
+				<Delphi.Personality>
+					<Source>
+						<Source Name="MainSource">AvoBase.dpr</Source>
+					</Source>
+					<Parameters>
+						<Parameters Name="UseLauncher">False</Parameters>
+						<Parameters Name="LoadAllSymbols">True</Parameters>
+						<Parameters Name="LoadUnspecifiedSymbols">False</Parameters>
+					</Parameters>
+					<VersionInfo>
+						<VersionInfo Name="IncludeVerInfo">False</VersionInfo>
+						<VersionInfo Name="AutoIncBuild">False</VersionInfo>
+						<VersionInfo Name="MajorVer">1</VersionInfo>
+						<VersionInfo Name="MinorVer">0</VersionInfo>
+						<VersionInfo Name="Release">0</VersionInfo>
+						<VersionInfo Name="Build">0</VersionInfo>
+						<VersionInfo Name="Debug">False</VersionInfo>
+						<VersionInfo Name="PreRelease">False</VersionInfo>
+						<VersionInfo Name="Special">False</VersionInfo>
+						<VersionInfo Name="Private">False</VersionInfo>
+						<VersionInfo Name="DLL">False</VersionInfo>
+						<VersionInfo Name="Locale">1033</VersionInfo>
+						<VersionInfo Name="CodePage">1252</VersionInfo>
+					</VersionInfo>
+					<VersionInfoKeys>
+						<VersionInfoKeys Name="CompanyName"/>
+						<VersionInfoKeys Name="FileDescription"/>
+						<VersionInfoKeys Name="FileVersion">1.0.0.0</VersionInfoKeys>
+						<VersionInfoKeys Name="InternalName"/>
+						<VersionInfoKeys Name="LegalCopyright"/>
+						<VersionInfoKeys Name="LegalTrademarks"/>
+						<VersionInfoKeys Name="OriginalFilename"/>
+						<VersionInfoKeys Name="ProductName"/>
+						<VersionInfoKeys Name="ProductVersion">1.0.0.0</VersionInfoKeys>
+						<VersionInfoKeys Name="Comments"/>
+					</VersionInfoKeys>
+					<Excluded_Packages>
+						<Excluded_Packages Name="$(BDS)\bin\dclofficexp120.bpl">Microsoft Office XP Sample Automation Server Wrapper Components</Excluded_Packages>
+					</Excluded_Packages>
+				</Delphi.Personality>
+				<ModelSupport>False</ModelSupport>
+			</BorlandProject>
+			<ProjectFileVersion>12</ProjectFileVersion>
+		</ProjectExtensions>
+	</Project>

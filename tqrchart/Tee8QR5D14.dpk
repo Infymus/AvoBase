@@ -1,0 +1,191 @@
+package Tee8QR5D14;
+
+{$R *.res}
+{$ALIGN 8}
+{ ASSERTIONS OFF}
+{$BOOLEVAL OFF}
+{ DEBUGINFO OFF}
+{$EXTENDEDSYNTAX ON}
+{$IMPORTEDDATA ON}
+{$IOCHECKS ON}
+{ LOCALSYMBOLS OFF}
+{$LONGSTRINGS ON}
+{$OPENSTRINGS ON}
+{$OPTIMIZATION ON}
+{$OVERFLOWCHECKS OFF}
+{$RANGECHECKS OFF}
+{$REFERENCEINFO OFF}
+{$SAFEDIVIDE OFF}
+{$STACKFRAMES OFF}
+{$TYPEDADDRESS OFF}
+{$VARSTRINGCHECKS ON}
+{$WRITEABLECONST OFF}
+{$MINENUMSIZE 1}
+{$IMAGEBASE $42500000}
+{$DESCRIPTION 'TeeChart 8 for QuickReport 5'}
+{$RUNONLY}
+{$IMPLICITBUILD OFF}
+
+requires
+  vcl,
+  vcldb,
+  Tee,
+  TeeDB,
+  TeeUI,
+  QR5RUN_RAD6;
+
+contains
+  QRTee in 'QRTee.pas';
+
+end.
+
+
+
+{
+
+PDF Version here
+QuickReport
+
+General note: These steps are written in order to help users when trying to install the TQRChart component without depending on the TeeChart, QuickReport or Delphi version they use.
+
+Note for source code customers: With the sources it is given TeeRecompile tool that already compiles the TQRChart package for you. If TeeRecompile gives a dependences problem trying to compile the TQRChart packages, try to edit them manually (with notepad or similar), correct the wrong references and run TeeRecompile tool again.
+
+
+
+All TeeChart packages are compiled with built-in version of Quick Report. If you're using different Quick Report version (newer or PRO version) you'll have to recompile and reinstall TQRChart component files after you've installed the latest TeeChart and Quick Report version. The necessary source code files (all TQRChart component files) and instructions how to do this are usually located in one of TeeChart subfolders ("QuickReport" subfolder). In addition, below you will find step-by-step instructions explaining how to compile and use TeeChart with any QuickReport version.
+
+
+
+Cleaning the environment from previous TeeChart or QuickReport installations. These are recommended steps to avoid delphi’s possible confusions when trying to install the TQRChart package later.
+
+
+
+1. Uninstall old TeeChart with Delphi closed.
+
+
+
+2. Uninstall old QuickReport with Delphi closed.
+
+
+
+3. Clean residual files and folders if remaining. Search TeeChart and QuickReport remaining files at Delphi's bin folder, Delphi's lib folder and windows' system32 folder.
+
+
+
+4. Clean Delphi's search path. Remove references to uninstalled packages.
+
+
+
+5. Open Delphi and test it running an empty form.
+
+
+
+6. Install QuickReport with Delphi closed.
+
+
+
+7. Open Delphi and add the QuickReport design bpl at Delphi's package list.
+
+
+
+8. Add the search path where QuickReport was installed.
+
+
+
+9. Test Delphi with QuickReport (create a new application, drop a TQuickRep component on the form and run it).
+
+
+
+10. Install TeeChart with Delphi closed.
+
+
+
+11. Open Delphi and test it with TeeChart (create a new application, drop a TChart component on the form and run it).
+
+
+
+At this point you should have a “clean environment” where TeeChart and QuickReport work by separate.
+
+
+
+
+
+TQRChart packages compilation.
+
+
+
+12. We recommend you to create a new folder that will contain the compiled files we are going to get. This will be a temporal folder and we can delete it after finishing all the whole process. But in meanwhile, as we need to reference it we will call it as "compiled folder" during this installation instructions.
+
+
+
+13. Open the “runtime package” for TQRChart. It is called Tee8QR4D11.dpk, Tee7QR4D10.dpk,... depending on your particular TeeChart, QuickReport and Delphi/BCB version environment. The first number indicates which TeeChart version was the package made for, the second number indicates the QuickReport version and the last number indicates the Delphi version. You will find the package at your TeeChart installation folder, inside QuickReport folder.
+
+
+
+14. Set the "compiled folder" we've just created as output path for the compiled files that will generate the package compilation. This will make easier to find the bpl, dcu and dcp files.
+
+
+
+15. Build the project. You may find an error finding the correct runtime library for QuickReport. So you should look for the dcp file that causes the problem at the requires list, remove it from the list and add the correct one from your QuickReport installation folder, inside its bpl folder. Then, try to build it again.
+
+
+
+16. Save the project once it will compile fine.
+
+
+
+
+
+17. Open design time package for TQRChart. It is called (following the same number nomenclature as before) DclTee8QR4D11.dpk, DclTee7QR4D10.dpk,... You will find the package at your TeeChart installation folder, inside QuickReport folder.
+
+
+
+18. Again, set the "compiled folder" as output path for the compiled files that will generate the package compilation. and this time add this folder to the search path list to as this design time package needs to find the TQRChart runtime package compiled files we've just generated.
+
+
+
+19. Build the project. You may find an error finding the correct design time library for TeeChart. So you should look for the dcp file that causes the problem at the requires list, remove it from the list and add the correct one from your TeeChart installation folder, inside its lib folder. It's called DclTeePro811.dcp, DclTeePro710.dcp,... Then, try to build it again.
+
+
+
+20. Save the project once it will compile fine.
+
+
+
+
+
+Here you should have the TQRChart packages compiled.
+
+
+
+21. Close Delphi and copy the compiled files from your "compiled folder":
+
+- TQRChart's design time bpl to Delphi's bin folder (DclTee8QR4D11.bpl or DclTee7QR4D10.bpl or...).
+
+- All dcu and dcp files to Delphi's lib folder.
+
+- TQRChart's runtime bpl to your windows' system32 folder (Tee8QR4D11.bpl or Tee7QR4D10.bpl or...).
+
+
+
+22. Still with Delphi closed, copy all bpls from the bin folder inside your TeeChart installation to your Delphi's bin folder.
+
+
+
+23. Open Delphi and add TQRChart's design time bpl from your Delphi's bin folder to Delphi's package list.
+
+
+
+24. Finally, test if TQRChart works fine in a new application (create a new application in you IDE, drag a TQuickRep component on the Form, drag a TQRChart component onto the QRBand and run it).
+
+
+
+To search for more information related to this subject see the Steema Forums.
+
+
+Copyright 2011 Steema Software SL. Copyright Information. e-mail info@steema.com.
+Privacy Policy All other brands and product names are trademarks or registered trademarks of their respective owners.
+
+
+
+   }

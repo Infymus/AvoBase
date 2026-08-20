@@ -1,0 +1,54 @@
+============================================
+ TeeChart v8 
+
+ Source code files to install TeeChart
+ for QuickReport v3 or v4.
+
+============================================   
+  
+Note: Compilation requires your Project->Options
+"Search Path" to point to the folder where 
+TeeChart Lib and QuickReport Lib files reside
+(compiled dcu units, dcp packages, etc).
+
+-------------------------------------------------
+
+If you have QuickReport v3, open and compile
+the following packages, where "xx" means 
+the number of your Delphi or BDS version,
+for example "7" means Delphi 7, 
+"10" means BDS 2006, etc:
+
+
+   TeeQR8xx.dpk     Run-time package.
+   DclTQR8xx.dpk    Design-time package.
+
+
+If you have QuickReport v4, open and compile
+the following packages:
+
+   Tee8QR4Dxx.dpk       Run-time package.
+   DclTee8QR4Dxx.dpk    Design-time package.
+
+
+After compilation, go to Component->Install Packages
+and add the just compiled Design-Time package.
+
+
+For any question or problem regarding this recompilation,
+you can contact us for support help:
+
+If you are a TeeChart registered owner then use the
+priority support forums at:
+
+http://www.teechart.net/support/index.php
+
+If you are using the free TeeChart version included in 
+Delphi or BDS, use the public support newsgroups:
+
+news://www.steema.net/steema.public.teechart8.delphi
+
+====================================================
+Steema Software 
+www.steema.com
+====================================================
